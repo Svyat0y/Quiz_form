@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quiz form</title>
     <link rel="stylesheet" href="css/main.css">
-
 </head>
 <body>
 
@@ -23,7 +22,7 @@
             <div class="modal_item">
                 <form action="" method="post" class="quiz_form">
                     <div class="modal_item-header">
-                        <h2>title<span class="contQ">
+                        <h2>Форма поиска<span class="contQ">
                                 <span class="currentQ">1</span>/<span class="allQ">0</span>
                             </span>
                         </h2>
@@ -38,28 +37,96 @@
                         <div class="quiz_blockWr">
                             <div class="quiz_block active">
                                 <label for="data1">
-                                    <p>Введите данные первое поле</p>
-                                    <input type="text" placeholder="Введите данные1" id="data1" class="input_frm">
+                                    <h2 class="title_element">Ваше имя</h2>
+                                    <input type="text" placeholder="Ваше имя" id="data1" class="input_frm">
                                 </label>
                             </div>
                             <div class="quiz_block">
-                                <label for="data2">
-                                    <p>Введите данные второе поле</p>
-                                    <input type="text" placeholder="Введите данные2" id="data2" class="input_frm">
+                                <label for="select">
+                                    <h2 class="title_element">Ваш возраст</h2>
+                                    <select id="select">
+                                        <option value="age1">18-25</option>
+                                        <option value="age2">26-40</option>
+                                        <option value="age3">41+</option>
+                                    </select>
                                 </label>
                             </div>
                             <div class="quiz_block">
-                                <label for="data3">
-                                    <p>Введите данные третье поле</p>
-                                    <input type="text" placeholder="Введите данные3" id="data3" class="input_frm">
+                                <h2 class="title_element">Ваш пол</h2>
+                                <label class="labelForm" for="male">
+                                    <input checked type="radio" name="currency" id="male" class="remove_input">
+                                    <span class="checkedInput"></span>
+                                    <p>Мужчина</p>
+                                </label>
+                                <label class="labelForm" for="female">
+                                    <input type="radio" name="currency" id="female" class="remove_input">
+                                    <span class="checkedInput"></span>
+                                    <p>Женщина</p>
+                                </label>
+                                <label class="labelForm" for="noGender">
+                                    <input type="radio" name="currency" id="noGender" class="remove_input">
+                                    <span class="checkedInput"></span>
+                                    <p>Я не определяю себя как М или Ж</p>
                                 </label>
                             </div>
                             <div class="quiz_block">
-                                <label for="data4">
-                                    <p>Введите данные четвертое поле</p>
-                                    <input type="text" placeholder="Введите данные4" id="data4" class="input_frm">
-                                    <button type="submit" class="btn form_btn" id="form_btn">Отправить</button>
+                                <h2 class="title_element">Ваш стек</h2>
+                                <label class="labelForm" for="html">
+                                    <input type="checkbox" name="currency" id="html" class="remove_input">
+                                    <span class="checkedInput checkbox"></span>
+                                    <p>HTML</p>
                                 </label>
+                                <label class="labelForm" for="css">
+                                    <input type="checkbox" name="currency" id="css" class="remove_input">
+                                    <span class="checkedInput checkbox"></span>
+                                    <p>CSS</p>
+                                </label>
+                                <label class="labelForm" for="bootstrap">
+                                    <input type="checkbox" name="currency" id="bootstrap" class="remove_input">
+                                    <span class="checkedInput checkbox"></span>
+                                    <p>Bootstrap</p>
+                                </label>
+                                <label class="labelForm" for="js">
+                                    <input type="checkbox" name="currency" id="js" class="remove_input">
+                                    <span class="checkedInput checkbox"></span>
+                                    <p>JavaScript</p>
+                                </label>
+                                <label class="labelForm" for="git">
+                                    <input type="checkbox" name="currency" id="git" class="remove_input">
+                                    <span class="checkedInput checkbox"></span>
+                                    <p>Git</p>
+                                </label>
+                                <label class="labelForm"for="react">
+                                    <input type="checkbox" name="currency" id="react" class="remove_input">
+                                    <span class="checkedInput checkbox"></span>
+                                    <p>React</p>
+                                </label>
+                                <label class="labelForm" for="angular">
+                                    <input type="checkbox" name="currency" id="angular" class="remove_input">
+                                    <span class="checkedInput checkbox"></span>
+                                    <p>Angular</p>
+                                </label>
+                                <label class="labelForm" for="vue">
+                                    <input type="checkbox" name="currency" id="vue" class="remove_input">
+                                    <span class="checkedInput checkbox"></span>
+                                    <p>Vue</p>
+                                </label>
+                                <label class="labelForm" for="nodeJs">
+                                    <input type="checkbox" name="currency" id="nodeJs" class="remove_input">
+                                    <span class="checkedInput checkbox"></span>
+                                    <p>NodeJs</p>
+                                </label>
+                            </div>
+                            <div class="quiz_block">
+                                <label class="labelForm2" for="phone">
+                                    <h2 class="title_element">Ваш телефон</h2>
+                                    <input type="text" placeholder="Ваш телефон" id="phone" class="input_frm">
+                                </label>
+                                <label class="labelForm2" for="email">
+                                    <h2 class="title_element">Ваш email</h2>
+                                    <input type="email" placeholder="Ваш email" id="email" class="input_frm">
+                                </label>
+                                <button type="submit" class="btn form_btn" id="form_btn">Отправить</button>
                             </div>
                         </div>
 

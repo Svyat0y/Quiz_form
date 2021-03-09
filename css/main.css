@@ -153,7 +153,7 @@ h6 {
     padding: 20px;
     border-radius: 8px;
     position: relative;
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -215,7 +215,7 @@ h6 {
 
 .modal_item-body {
     padding: 20px;
-    overflow-y: auto;
+    /*overflow-y: auto;*/
     height: auto;
 
 }
@@ -259,10 +259,6 @@ h6 {
     display: block;
 }
 
-.quiz_block p {
-    margin-bottom: 10px;
-}
-
 label {
     cursor: pointer;
 }
@@ -273,16 +269,179 @@ label {
     text-indent: 20px;
     color: #1c1c1c;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 16px;
 }
 
 .input_frm::placeholder {
     color: #1c1c1c;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 16px;
 }
 
 .form_btn {
     margin: 20px 0 0 0;
     float: right;
+}
+
+
+
+.custom_select {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.select_title {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+    padding: 0 10px;
+    width: 100%;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.select_title:after {
+    border-color: #000 transparent transparent transparent;
+    border-style: solid;
+    border-width: 8px 10px;
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    right: 15px;
+    top: 45%;
+    width: 0;
+    transition: 0.3s ease;
+}
+
+.select_title.active:after {
+    border-color: transparent transparent #000 transparent;
+    top: calc(45% - 8px);
+    transition: 0.3s ease;
+}
+
+.select_list {
+    background: #fff;
+    border-left: 1px solid #a5a5a5;
+    border-right: 1px solid #a5a5a5;
+    display: none;
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    transition: 0.2s linear;
+    width: 100%;
+    z-index: 999;
+}
+
+.select_list.open {
+    display: block;
+    height: auto;
+    opacity: 1;
+    box-shadow: 0 1px 5px #ddd;
+}
+
+.select_list li {
+    border-bottom: 1px solid #ddd;
+    color: #000;
+    cursor: pointer;
+    height: 50px;
+    padding: 0 10px;
+    line-height: 50px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.select_list li span {
+    min-width: 70px;
+}
+
+.select_list li:hover {
+    background: #7A828E;
+    color: #fff;
+    transition: all 0.3s ease;
+
+}
+
+.select_list li.selected {
+    background: #7A828E;
+    color: #fff;
+}
+
+.select_optgroup {
+    border-bottom: 1px solid #ddd;
+    color: #fff;
+    cursor: default;
+    padding: 10px;
+    text-align: center;
+}
+
+.select_img {
+    max-width: 40px;
+}
+
+.labelForm {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+.labelForm2 {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.labelForm2 .title_element {
+    margin-bottom: 5px;
+}
+
+.title_element {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.remove_input {
+    opacity: 0;
+    position: absolute;
+}
+.checkedInput {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #262626;
+    border-radius: 50%;
+    margin-right: 5px;
+    position: relative;
+}
+.checkedInput::after {
+    content: '';
+    position: absolute;
+    display: block;
+    transform: scale(0);
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    background: #262626;
+    border-radius: 50%;
+    margin-right: 5px;
+    transition: all .3s ease;
+}
+.remove_input:checked ~ .checkedInput::after {
+    transform: scale(1);
+}
+.checkedInput.checkbox,
+.checkedInput.checkbox::after {
+    border-radius: 0;
 }
