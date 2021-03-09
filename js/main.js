@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // MODAL START
+    // MODAL START!
     let modalItemBtn = document.querySelectorAll('[data-trigger-modal]');
     if (modalItemBtn) {
         let window = document.body;
